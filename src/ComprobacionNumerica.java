@@ -147,19 +147,7 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
     } else {
         JOptionPane.showMessageDialog(this, "No hay números primos menores al ingresado.");
     }
-       /* boolean p =true;
-        if (num == 0 || num == 1 || num == 4) {
-          return false;
-  }
-  for (int x = 2; x < num / 2; x++) {
-    // Si es divisible por cualquiera de estos números, no
-    // es primo
-    if (num % x == 0)
-          return false;
-  }
-  // Si no se pudo dividir por ninguno de los de arriba, sí es primo
-          return true;
-}*/
+
     }//GEN-LAST:event_lbnComprobarActionPerformed
 
     /**
