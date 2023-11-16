@@ -100,9 +100,66 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
             }else if(num !=suma){
                 JOptionPane.showMessageDialog(this,suma + " No es numero perfecto");
             }
-            //System.out.println(i);
-            //JOptionPane.showInputDialog(" Es numero prerfecto");
+            
         }
+        boolean prime = true; 
+    for(i = 2; i < num; i++) {
+        if (num % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+    if (prime){
+        
+            JOptionPane.showMessageDialog(this,"Es un numero primo");
+    }else{
+            JOptionPane.showMessageDialog(this, "No es numero primo");
+}
+     // Verificar si el número es primo y mostrar la lista de primos menores
+    boolean esPrimo = true;
+    StringBuilder primosMenores = new StringBuilder("Números primos menores al ingresado: ");
+    int sumaPrimos = 0;
+
+    for (i = 2; i < num; i++) {
+        prime = true;
+
+        for (int j = 2; j < i; j++) {
+            if (i % j == 0) {
+                prime = false;
+                break;
+            }
+        }
+
+        if (prime) {
+            primosMenores.append(i).append(", ");
+            sumaPrimos += i;
+        }
+    }
+
+    if (primosMenores.length() > 0) {
+        primosMenores.setLength(primosMenores.length() - 2); // Eliminar la coma y el espacio al final
+        JOptionPane.showMessageDialog(this, primosMenores.toString());
+        JOptionPane.showMessageDialog(this, "Sumatoria de números primos menores: " + sumaPrimos);
+        
+        // Calcular la raíz cuadrada de la sumatoria de primos menores
+        double raizCuadrada = Math.sqrt(sumaPrimos);
+        JOptionPane.showMessageDialog(this, "Raíz cuadrada de la sumatoria de primos menores: " + raizCuadrada);
+    } else {
+        JOptionPane.showMessageDialog(this, "No hay números primos menores al ingresado.");
+    }
+       /* boolean p =true;
+        if (num == 0 || num == 1 || num == 4) {
+          return false;
+  }
+  for (int x = 2; x < num / 2; x++) {
+    // Si es divisible por cualquiera de estos números, no
+    // es primo
+    if (num % x == 0)
+          return false;
+  }
+  // Si no se pudo dividir por ninguno de los de arriba, sí es primo
+          return true;
+}*/
     }//GEN-LAST:event_lbnComprobarActionPerformed
 
     /**
