@@ -100,7 +100,7 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
             }else if(num !=suma){
                 JOptionPane.showMessageDialog(this,suma + " No es numero perfecto");
             }
-            
+            break;
         }
         boolean prime = true; 
     for(i = 2; i < num; i++) {
@@ -137,13 +137,14 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
     }
 
     if (primosMenores.length() > 0) {
-        primosMenores.setLength(primosMenores.length() - 2); // Eliminar la coma y el espacio al final
-        JOptionPane.showMessageDialog(this, primosMenores.toString());
-        JOptionPane.showMessageDialog(this, "Sumatoria de números primos menores: " + sumaPrimos);
+       primosMenores.setLength(primosMenores.length() - 2); // Eliminar la coma y el espacio al final
+       JOptionPane.showMessageDialog(this, primosMenores.toString());
+       JOptionPane.showMessageDialog(this, "Sumatoria de números primos menores: " + sumaPrimos);
         
         // Calcular la raíz cuadrada de la sumatoria de primos menores
         double raizCuadrada = Math.sqrt(sumaPrimos);
-        JOptionPane.showMessageDialog(this, "Raíz cuadrada de la sumatoria de primos menores: " + raizCuadrada);
+        JOptionPane.showMessageDialog(this, "Raíz cuadrada de la sumatoria de primos menores: " 
+                + raizCuadrada);
     } else {
         JOptionPane.showMessageDialog(this, "No hay números primos menores al ingresado.");
     }
